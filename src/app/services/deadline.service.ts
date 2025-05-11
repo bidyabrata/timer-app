@@ -11,10 +11,10 @@ export class DeadlineService {
   constructor() { }
 
   getSecondsLeftToDeadline(): Observable<{ secondsLeft: number }> {
-    return new Observable<{ secondsLeft: number }>(observer => {
-      observer.next({ secondsLeft: 20 }); 
-      observer.complete();
-    });
-    //return this.http.get<{ secondsLeft: number }>('/api/deadline');
+    // return new Observable<{ secondsLeft: number }>(observer => {
+    //   observer.next({ secondsLeft: 20 }); 
+    //   observer.complete();
+    // });
+    return this.http.get<{ secondsLeft: number }>('/api/deadline');
   }
 }
