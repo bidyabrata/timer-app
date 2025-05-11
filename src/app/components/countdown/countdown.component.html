@@ -1,0 +1,8 @@
+<h1>Countdown Example</h1>
+<div *ngIf="error">
+    <p class="error">Failed to fetch deadline. Please try again later.</p>
+  </div>
+<div *ngIf="!error && secondsLeft !== null">
+    <p *ngIf="secondsLeft > 0">Seconds left to deadline: {{ secondsLeft }}</p>
+    <p *ngIf="secondsLeft === 0" class="error">Your deadline is over.</p>
+</div>
